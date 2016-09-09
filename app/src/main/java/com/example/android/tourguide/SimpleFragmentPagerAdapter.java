@@ -20,6 +20,8 @@ public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
                 return new EventFragment();
             case 3:
                 return new RestaurantFragment();
+            case 4:
+                return new PhrasesFragment();
             default:
                 return null;
         }
@@ -27,7 +29,7 @@ public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 4;
+        return 5;
     }
 
     @Override
@@ -41,6 +43,8 @@ public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
                 return "Events";
             case 3:
                 return "Restaurants";
+            case 4:
+                return "Phrases";
             default:
                 return super.getPageTitle(position);
         }
