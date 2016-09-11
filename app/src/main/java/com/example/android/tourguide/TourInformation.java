@@ -12,7 +12,7 @@ public class TourInformation {
     /**
      * Image Resource ID for the tour information
      */
-    private int imageResourceId;
+    private int imageResourceId = NO_IMAGE_PROVIDED;
 
     /**
      * Constant Value that represents no image was provided for this tour information
