@@ -7,7 +7,6 @@ public class TourInformation {
 
     private String title;
     private String description;
-    private String date;
 
     /**
      * Image Resource ID for the tour information
@@ -19,17 +18,15 @@ public class TourInformation {
      */
     private static final int NO_IMAGE_PROVIDED = -1;
 
-    public TourInformation(String title, String description, String date, int imageResourceId) {
+    public TourInformation(String title, String description, int imageResourceId) {
         this.title = title;
         this.description = description;
-        this.date = date;
         this.imageResourceId = imageResourceId;
     }
 
-    public TourInformation(String title, String description, String date) {
+    public TourInformation(String title, String description) {
         this.title = title;
         this.description = description;
-        this.date = date;
     }
 
     public String getTitle() {
@@ -38,10 +35,6 @@ public class TourInformation {
 
     public String getDescription() {
         return description;
-    }
-
-    public String getDate() {
-        return date;
     }
 
     public int getImageResourceId() {

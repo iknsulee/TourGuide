@@ -25,22 +25,17 @@ public class TopAttractionFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.tour_list, container, false);
 
         ArrayList<TourInformation> tourInformationList = new ArrayList<>();
-        tourInformationList.add(new TourInformation("Dongdaemun Market", "A huge shopping district where you can find almost anything!", "", R.drawable.dongdaemun));
-        tourInformationList.add(new TourInformation("Myeong-dong", "Seoul's shopping mecca filled with beauty outlets, street stalls, and more", "", R.drawable.myeong_dong));
-        tourInformationList.add(new TourInformation("Gyeongbokgung Palace", "The first royal palace built during the Joseon dynasty", "", R.drawable.gyeongbokgung));
-        tourInformationList.add(new TourInformation("N Seoul Tower", "One of the most popular ways to see Seoul's skyline", "", R.drawable.n_seoul_tower));
-        tourInformationList.add(new TourInformation("Insa-dong", "Experience Korea's traditional charm through food and shopping", "", R.drawable.insadong));
-        tourInformationList.add(new TourInformation("Namdaemun Market", "The largest traditional market in Korea with over 10,000 stores", "", R.drawable.namdaemun));
-        tourInformationList.add(new TourInformation("Seoul City Wall", "Once used as a fortress in the past, it is now a scenic way to explore the city", "", R.drawable.seoul_city_wall));
+        tourInformationList.add(new TourInformation(getString(R.string.dongdaemun_market), getString(R.string.dongdaemun_market_desc), R.drawable.dongdaemun));
+        tourInformationList.add(new TourInformation(getString(R.string.myeong_dong), getString(R.string.myeong_dong_desc), R.drawable.myeong_dong));
+        tourInformationList.add(new TourInformation(getString(R.string.gyeongbokgung_palace), getString(R.string.gyeongbokgung_palace_desc), R.drawable.gyeongbokgung));
+        tourInformationList.add(new TourInformation(getString(R.string.n_seoul_tower), getString(R.string.n_seoul_tower_desc), R.drawable.n_seoul_tower));
+        tourInformationList.add(new TourInformation(getString(R.string.insadong), getString(R.string.insadong_desc), R.drawable.insadong));
+        tourInformationList.add(new TourInformation(getString(R.string.namdaemun_market), getString(R.string.namdaemun_market_desc), R.drawable.namdaemun));
+        tourInformationList.add(new TourInformation(getString(R.string.seoul_city_wall), getString(R.string.seoul_city_wall_desc), R.drawable.seoul_city_wall));
 
         // Create a TourInformationAdapter, whose data source is a list of TourInformation. The
         // adapter knows how to create list items for each item in the list.
-        TourInformationAdapter tourInformationAdapter =
-                new TourInformationAdapter(
-                        getActivity(),
-                        tourInformationList,
-                        R.color.category_phrases
-                );
+        TourInformationAdapter tourInformationAdapter = new TourInformationAdapter(getActivity(), tourInformationList, R.color.item_background);
 
         // Find the ListView object in the view hierarchy of the Activity.
         // There should be a ListView with the view ID called list, which is declared in the

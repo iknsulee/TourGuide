@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -27,22 +26,17 @@ public class TraditionalFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.tour_list, container, false);
 
         ArrayList<TourInformation> tourInformationList = new ArrayList<>();
-        tourInformationList.add(new TourInformation("Traditional Craft Making", "Use your own two hands to make traditional handicraft items that were used in the past.", ""));
-        tourInformationList.add(new TourInformation("Traditional Music", "Full of passion and spirit, Korean traditional music captivates its listeners.", ""));
-        tourInformationList.add(new TourInformation("Traditional Food", "Have yourself a proper Korean dining experience.", ""));
-        tourInformationList.add(new TourInformation("Traditional Sports", "See the passion and dedication that goes into Korean martial arts.", ""));
-        tourInformationList.add(new TourInformation("Traditional Games", "Learn how folks from ancient Korean history bonded and kept themselves entertained.", ""));
-        tourInformationList.add(new TourInformation("Traditional Dancing", "Beautiful and graceful performances with a rich history.", ""));
-        tourInformationList.add(new TourInformation("Temple Stay", "The Temple stay program not only brings you closer to nature, but also to yourself.", ""));
+        tourInformationList.add(new TourInformation(getString(R.string.traditional_craft_making), getString(R.string.traditional_craft_making_desc)));
+        tourInformationList.add(new TourInformation(getString(R.string.traditional_music), getString(R.string.traditional_music_desc)));
+        tourInformationList.add(new TourInformation(getString(R.string.traditional_food), getString(R.string.traditional_food_desc)));
+        tourInformationList.add(new TourInformation(getString(R.string.traditional_sports), getString(R.string.traditional_sports_desc)));
+        tourInformationList.add(new TourInformation(getString(R.string.traditional_games), getString(R.string.traditional_games_desc)));
+        tourInformationList.add(new TourInformation(getString(R.string.traditional_dancing), getString(R.string.traditional_dancing_desc)));
+        tourInformationList.add(new TourInformation(getString(R.string.temple_stay), getString(R.string.temple_stay_desc)));
 
         // Create a TourInformationAdapter, whose data source is a list of TourInformation. The
         // adapter knows how to create list items for each item in the list.
-        TourInformationAdapter tourInformationAdapter =
-                new TourInformationAdapter(
-                        getActivity(),
-                        tourInformationList,
-                        R.color.category_phrases
-                );
+        TourInformationAdapter tourInformationAdapter = new TourInformationAdapter(getActivity(), tourInformationList, R.color.item_background);
 
         // Find the ListView object in the view hierarchy of the Activity.
         // There should be a ListView with the view ID called list, which is declared in the
