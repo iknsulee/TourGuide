@@ -1,8 +1,5 @@
 package com.example.android.tourguide;
 
-/**
- * Created by donbosco on 2016-09-09.
- */
 public class TourInformation {
 
     private String title;

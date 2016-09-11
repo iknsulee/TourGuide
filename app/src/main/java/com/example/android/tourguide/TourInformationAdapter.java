@@ -12,9 +12,6 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by donbosco on 2016-09-09.
- */
 public class TourInformationAdapter extends ArrayAdapter<TourInformation> {
 
     /***
